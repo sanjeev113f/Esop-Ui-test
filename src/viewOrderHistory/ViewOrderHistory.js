@@ -1,6 +1,6 @@
 export default class ViewOrderHistory{
     async getTableData(userName){
-       return fetch(`http://localhost:8080/user/${userName}/order`)
+       return fetch(`http://localhost:8080/user/${userName}/orderHistory`)
              .then(function (response) {
                  return response.json();
              })
@@ -49,7 +49,7 @@ class HistoryTable{
         cell = document.createElement("td");
         cell.innerText = order["status"];
         newRow.appendChild(cell);
-w
+
         cell = document.createElement("td");
         cell.innerText = order["filledQty"];
         newRow.appendChild(cell);
